@@ -1,0 +1,132 @@
+/*
+Heather Bradfield
+Lab 6 Task 1
+3/8/16
+*/
+
+Script started on Tue Mar  8 10:25:33 2016
+[?1034hbash-3.2$ gcc parser.c l6t1.c scanner_ad_hoc.c
+bash-3.2$ ./a.out < input.txt
+funcProg : funcAssign: ID(firstvar) to INT(1) 
+funcProg : funcAssign: ID(secondvar) to INT(2) 
+funcProg : funcRepeat: INT(10) statement: funcAssign: ID(thirdvar) to INT(2) multOp(*) ID(firstvar) addOp(+) ID(secondvar) multOp(/) ID(firstvar) addOp(+) INT(2) 
+funcProg : funcRepeat: ID(firstvar) addOp(+) INT(2) multOp(*) ID(secondvar) statement: funcRepeat: ID(thirdvar) statement: funcPrint: ID(firstvar) 
+funcProg : 
+
+Traversing tree.. program: children 2
+Traversing tree.. statement: children 1
+Traversing tree.. assignStmt: children 2
+Traversing tree.. idNode: children 0, data: firstvar
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. numberNode: children 0, data: 1
+Traversing tree.. program: children 2
+Traversing tree.. statement: children 1
+Traversing tree.. assignStmt: children 2
+Traversing tree.. idNode: children 0, data: secondvar
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. numberNode: children 0, data: 2
+Traversing tree.. program: children 2
+Traversing tree.. statement: children 1
+Traversing tree.. repeatStmt: children 2
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. numberNode: children 0, data: 10
+Traversing tree.. statement: children 1
+Traversing tree.. assignStmt: children 2
+Traversing tree.. idNode: children 0, data: thirdvar
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 3
+Traversing tree.. factor: children 1
+Traversing tree.. numberNode: children 0, data: 2
+Traversing tree.. multOpNode: children 0, data: *
+Traversing tree.. term: children 3
+Traversing tree.. factor: children 1
+Traversing tree.. expr: children 3
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. idNode: children 0, data: firstvar
+Traversing tree.. addOpNode: children 0, data: +
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. idNode: children 0, data: secondvar
+Traversing tree.. multOpNode: children 0, data: /
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. expr: children 3
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. idNode: children 0, data: firstvar
+Traversing tree.. addOpNode: children 0, data: +
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. numberNode: children 0, data: 2
+Traversing tree.. program: children 2
+Traversing tree.. statement: children 1
+Traversing tree.. repeatStmt: children 2
+Traversing tree.. expr: children 3
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. idNode: children 0, data: firstvar
+Traversing tree.. addOpNode: children 0, data: +
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 3
+Traversing tree.. factor: children 1
+Traversing tree.. numberNode: children 0, data: 2
+Traversing tree.. multOpNode: children 0, data: *
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. idNode: children 0, data: secondvar
+Traversing tree.. statement: children 1
+Traversing tree.. repeatStmt: children 2
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. idNode: children 0, data: thirdvar
+Traversing tree.. statement: children 1
+Traversing tree.. printStmt: children 1
+Traversing tree.. expr: children 1
+Traversing tree.. term: children 1
+Traversing tree.. factor: children 1
+Traversing tree.. idNode: children 0, data: firstvar
+Traversing tree.. program: children 0
+
+Abstract traverse tree.. assignStmt: children 2
+Abstract traverse tree.. idNode: children 0, data: firstvar
+Abstract traverse tree.. numberNode: children 0, data: 1
+Abstract traverse tree.. assignStmt: children 2
+Abstract traverse tree.. idNode: children 0, data: secondvar
+Abstract traverse tree.. numberNode: children 0, data: 2
+Abstract traverse tree.. repeatStmt: children 2
+Abstract traverse tree.. numberNode: children 0, data: 10
+Abstract traverse tree.. assignStmt: children 2
+Abstract traverse tree.. idNode: children 0, data: thirdvar
+Abstract traverse tree.. numberNode: children 0, data: 2
+Abstract traverse tree.. multOpNode: children 0, data: *
+Abstract traverse tree.. idNode: children 0, data: firstvar
+Abstract traverse tree.. addOpNode: children 0, data: +
+Abstract traverse tree.. idNode: children 0, data: secondvar
+Abstract traverse tree.. multOpNode: children 0, data: /
+Abstract traverse tree.. idNode: children 0, data: firstvar
+Abstract traverse tree.. addOpNode: children 0, data: +
+Abstract traverse tree.. numberNode: children 0, data: 2
+Abstract traverse tree.. repeatStmt: children 2
+Abstract traverse tree.. idNode: children 0, data: firstvar
+Abstract traverse tree.. addOpNode: children 0, data: +
+Abstract traverse tree.. numberNode: children 0, data: 2
+Abstract traverse tree.. multOpNode: children 0, data: *
+Abstract traverse tree.. idNode: children 0, data: secondvar
+Abstract traverse tree.. repeatStmt: children 2
+Abstract traverse tree.. idNode: children 0, data: thirdvar
+Abstract traverse tree.. printStmt: children 1
+Abstract traverse tree.. idNode: children 0, data: firstvar
+bash-3.2$ exit
+exit
+
+Script done on Tue Mar  8 10:25:53 2016
